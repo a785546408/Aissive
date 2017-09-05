@@ -1,0 +1,366 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:android_custom="http://schemas.android.com/apk/res/com.lyz.subway"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="fill_parent"
+    tools:context="com.example.ticketcheck.MainActivity" >
+
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:background="@drawable/bottom_06" >
+
+        <Button
+            android:id="@+id/start"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="启动" />
+
+        <Button
+            android:id="@+id/suspend"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="暂停" />
+
+        <Button
+            android:id="@+id/stop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="结束" />
+    </LinearLayout>
+
+    <ScrollView
+        android:id="@+id/scrollView1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/linearLayout1"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/MainLayout"
+        android:scrollbarSize="5dp"
+        android:scrollbarStyle="outsideInset"
+        android:scrollbarThumbVertical="@color/SC_green" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:orientation="horizontal" >
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1" >
+
+                    <RelativeLayout
+                        android:layout_width="150dp"
+                        android:layout_height="150dp"
+                        android:layout_centerInParent="true"
+                        android:background="@drawable/back_03" >
+
+                        <CustomView.RoundProgressBar
+                            android:id="@+id/roundProgressBarLI"
+                            android:layout_width="97dp"
+                            android:layout_height="97dp"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerVertical="true"
+                            android_custom:roundColor="#C5C1AA"
+                            android_custom:roundProgressColor="#FFFF00" />
+
+                        <CustomView.RoundProgressBar
+                            android:id="@+id/roundProgressBarLO"
+                            android:layout_width="110dp"
+                            android:layout_height="110dp"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerVertical="true"
+                            android_custom:roundColor="#C5C1AA"
+                            android_custom:roundProgressColor="#1C86EE" />
+
+                        <TextView
+                            android:id="@+id/textL"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerVertical="true"
+                            android:text="0"
+                            android:textColor="#FFFF00"
+                            android:textSize="25dp" />
+
+                        <TextView
+                            android:id="@+id/msgL1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="80dp"
+                            android:layout_marginTop="85dp"
+                            android:text="人/min"
+                            android:textColor="#FFFF00"
+                            android:textSize="8dp" />
+
+                        <TextView
+                            android:id="@+id/msgL2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/msgL1"
+                       		android:layout_marginTop="3dp"
+                            android:layout_centerHorizontal="true"
+                            android:text="设定XX人/min"
+                            android:textColor="#FFFFFF"
+                            android:textSize="8dp" />
+
+                        <TextView
+                            android:id="@+id/msgL3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/msgL2"
+                            android:layout_centerHorizontal="true"
+                            android:text="标称XX人/min"
+                            android:textColor="#1C86EE"
+                            android:textSize="10dp" />
+                    </RelativeLayout>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1" >
+
+                    <RelativeLayout
+                        android:layout_width="150dp"
+                        android:layout_height="150dp"
+                        android:layout_centerInParent="true"
+                        android:background="@drawable/back_03" >
+
+                        <CustomView.RoundProgressBar
+                            android:id="@+id/roundProgressBarRI"
+                            android:layout_width="97dp"
+                            android:layout_height="97dp"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerVertical="true"
+                            android_custom:roundColor="#C5C1AA"
+                            android_custom:roundProgressColor="#FFFF00" />
+
+                        <CustomView.RoundProgressBar
+                            android:id="@+id/roundProgressBarRO"
+                            android:layout_width="110dp"
+                            android:layout_height="110dp"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerVertical="true"
+                            android_custom:roundColor="#C5C1AA"
+                            android_custom:roundProgressColor="#1C86EE" />
+
+                        <TextView
+                            android:id="@+id/textR"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerVertical="true"
+                            android:text="0"
+                            android:textColor="#FFFF00"
+                            android:textSize="30dp" />
+
+                        <TextView
+                            android:id="@+id/msgR1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="80dp"
+                            android:layout_marginTop="85dp"
+                            android:text="ms/笔"
+                            android:textColor="#FFFF00"
+                            android:textSize="8dp" />
+
+                        <TextView
+                            android:id="@+id/msgR2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/msgR1"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="3dp"
+                            android:text="普通单程票"
+                            android:textColor="#FFFFFF"
+                            android:textSize="8dp" />
+
+                        <TextView
+                            android:id="@+id/msgR3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/msgR2"
+                            android:layout_centerHorizontal="true"
+                            android:text="标称&lt;XXXms"
+                            android:textColor="#1C86EE"
+                            android:textSize="10dp" />
+                    </RelativeLayout>
+                </RelativeLayout>
+            </LinearLayout>
+
+            <CustomView.NewListView
+                android:id="@+id/list"
+                android:layout_width="match_parent"
+                android:layout_height="335dp"
+                android:listSelector="@android:color/transparent" />
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/MainLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_weight="1"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/machineid"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.2"
+                android:text="设备编号：NULL"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/stationid"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_weight="1.2"
+                android:text="车站编号：NULL"
+                android:textSize="15sp" />
+
+            <Chronometer
+                android:id="@+id/chronometer1"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textColor="#1e0903"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.2" >
+
+            <ImageView
+                android:id="@+id/imageView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.2"
+                android:background="@drawable/line_06" />
+
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.2"
+                android:background="@drawable/line_06" />
+
+            <ImageView
+                android:id="@+id/imageView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/line_06" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/pgoin"
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:layout_weight="1.1"
+                android:gravity="center_vertical"
+                android:text="进        0"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/passengerflow"
+                android:layout_width="75dp"
+                android:layout_height="30dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="客流"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/pgoout"
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:layout_weight="1.1"
+                android:gravity="center_vertical"
+                android:text="0        出"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/tgoin"
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:layout_weight="1.1"
+                android:gravity="center_vertical"
+                android:text="进        0"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/transaction"
+                android:layout_width="75dp"
+                android:layout_height="30dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="交易"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/tgout"
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:layout_weight="1.1"
+                android:gravity="center_vertical"
+                android:text="0        出"
+                android:textSize="13sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.1" >
+
+            <ImageView
+                android:id="@+id/imageView4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/line_11" />
+
+            <ImageView
+                android:id="@+id/imageView5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/line_11" />
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

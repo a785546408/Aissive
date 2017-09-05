@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    
+    <!-- 设备标题（一级菜单）的布局 -->
+    <LinearLayout
+        android:id="@+id/device_layout"
+        android:layout_width="match_parent"
+        android:layout_height="25dp"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/open_1"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/device_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:text="设　　备" />
+
+        
+        <ImageView
+            android:id="@+id/jiantou1"
+            android:layout_width="wrap_content"
+            android:layout_height="15dp"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/triangle_right" />
+		 <TextView
+            android:id="@+id/device_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dip"
+            android:layout_marginLeft="180dip"
+            android:text="																					" />
+
+    </LinearLayout>
+    
+        <LinearLayout
+        android:id="@+id/main1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <include layout="@layout/device" />
+    </LinearLayout>
+    
+    <!-- 样本管理标题（一级菜单）的布局 -->
+
+    <LinearLayout
+        android:id="@+id/select_layout"
+        android:layout_width="match_parent"
+        android:layout_height="25dp"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/open"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/manager_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dip"
+            android:text="样本管理" />
+
+        <ImageView
+            android:id="@+id/jiantou2"
+            android:layout_width="wrap_content"
+            android:layout_height="15dp"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/triangle_right" />
+
+        <TextView
+            android:id="@+id/manager_Total_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dip"
+            android:layout_marginTop="8dp"
+            android:text="Total:"
+            android:textSize="10sp" />
+
+        <TextView
+            android:id="@+id/manager_Total_data"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dip"
+            android:layout_marginTop="8dp"
+            android:text="0"
+            android:textSize="10sp" />
+
+        <TextView
+            android:id="@+id/manager_FileName_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dip"
+            android:layout_marginTop="8dp"
+            android:text="FileName:"
+            android:textSize="10sp" />
+
+        <TextView
+            android:id="@+id/manager_FileName_data"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dip"
+            android:layout_marginTop="8dp"
+            android:text="xxxxx"
+            android:textSize="10sp" />
+
+
+        <TextView
+            android:id="@+id/select"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+           android:layout_marginLeft="5dip"
+           android:layout_marginTop="3dp"
+            android:text=""
+            android:textSize="15sp" />
+         <TextView
+            android:id="@+id/demomanager_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dip"
+            android:layout_marginLeft="25dp"
+            android:text="																				" />
+        
+
+    </LinearLayout>
+
+    <!-- 样本管理子菜单的布局 -->
+
+    <LinearLayout
+        android:id="@+id/main2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <include layout="@layout/demo_manager" />
+    </LinearLayout>
+
+        <!-- 测试设置标题（一级菜单）的布局 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="25dp"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/setting"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/setting_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:text="测试设置" />
+        
+              <ImageView
+            android:id="@+id/jiantou3"
+            android:layout_width="wrap_content"
+            android:layout_height="15dp"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/triangle_right" />
+              <TextView
+            android:id="@+id/setting_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="253dp"
+             android:layout_marginTop="3dp"
+            android:textSize="15sp" 
+             />
+    </LinearLayout>
+    
+    <!-- 测试设置子菜单的布局 -->
+    <LinearLayout
+        android:id="@+id/main3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <include layout="@layout/test_setting" />
+    </LinearLayout>
+
+</LinearLayout>
